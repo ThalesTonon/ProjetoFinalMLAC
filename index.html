@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>InvesteFácil - Análise de Mercado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-custom" href="index.html">InvesteFácil</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav text-custom">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="src/cdi.html">CDI</a></li>
+                    <li><a href="src/ipca.html">IPCA</a></li>
+                    <li><a href="src/ifix.html">IFIX</a></li>
+                    <li><a href="src/investimentos.html">INVESTIMENTOS</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle text-custom" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Sua Conta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li style="margin-left: 2rem;">João da Silva</li>
+                            <li><a href="#" onclick="sairFunction()"><span style="margin-right: 1rem;"
+                                        class="glyphicon glyphicon-log-out"></span>Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="dadosCliente">
+            <div class="tituloPagina">
+                <h3>Investimentos disponíveis</h3>
+            </div>
+            <div class="saldoCliente">
+                <p>Saldo investido: </p>
+                <strong>R$ 10.000,00</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">CDI</div>
+                    <div class="panel-body investimentosBody">
+                        <p>O CDI (Certificado de Depósito Interbancário) é uma taxa de juros que serve como referência
+                            para investimentos em renda
+                            fixa. </p>
+                        <p>
+                            O valor acumulado até o momento é de <strong> 6,01%</strong>.
+                        </p>
+                    </div>
+                    <div class="panel-footer"><a href="src/cdi.html" class="btn btn-default">Saiba mais sobre o CDI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">IPCA</div>
+                    <div class="panel-body investimentosBody">
+                        <p>O Índice Nacional de Preços ao Consumidor Amplo, ou simplesmente IPCA, refere-se como sendo
+                            um dos principais índices na representação da inflação em território nacional.</p>
+                        <p>
+                            O valor acumulado até o momento é de <strong> 2,460%</strong>.
+                        </p>
+                    </div>
+                    <div class="panel-footer"><a href="src/ipca.html" class="btn btn-default">Saiba mais sobre o
+                            IPCA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">IFIX</div>
+                    <div class="panel-body investimentosBody">
+                        <p>O objetivo do IFIX é ser o indicador do desempenho médio das cotações dos fundos imobiliários
+                            negociados nos mercados de
+                            bolsa e de balcão organizado da B3.</p>
+                        <p>O valor acumulado até o momento é de <strong> 1,02%</strong>.</p>
+                    </div>
+                    <div class="panel-footer"><a href="src/ifix.html" class="btn btn-default">Saiba mais sobre o
+                            IFIX</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center" style="margin: 2rem 0;">Últimas Notícias</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a
+                            href="https://www.moneytimes.com.br/petrobras-pert4-responde-se-havera-dividendos-extraordinarios-kda/">Petrobras
+                            (PETR4) responde se haverá dividendos
+                            extraordinários</a></li>
+                    <li class="list-group-item"><a
+                            href="https://www.empiricus.com.br/artigos/investimentos/b3-b3sa3-resultado-solido-do-2t24-evidencia-bom-trabalho-na-criacao-de-novas-linhas-de-negocio-veja-o-balanco/">B3
+                            (B3SA3): resultado sólido do 2T24 evidencia bom trabalho
+                            na criação de novas linhas de negócio; veja o balanço.</a></li>
+                    <li class="list-group-item"><a
+                            href="https://www.moneytimes.com.br/ipca-inflacao-julho-frustra-expectativas-e-economistas-dizem-que-melhor-momento-qualitativo-ficou-para-tras-e-agora-gll/">Inflação
+                            frustra expectativas e economistas dizem que melhor
+                            momento qualitativo ficou para trás; e agora?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row depoimentos">
+            <div class="col-sm-12">
+                <h3 class="text-center">Depoimentos de Clientes</h3>
+                <div class="carousel slide" id="depoimentosCarousel" data-ride="carousel">
+                    <div class="carousel-inner text-center">
+                        <div class="item active">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="imagemCliente">
+                                        <img src="image/fotoMaria.jpg" alt="fotoMaria">
+                                    </div>
+                                    <h4>Maria Santos</h4>
+
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>"A InvesteFácil me ajudou a diversificar meus investimentos de forma inteligente
+                                        e segura."</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="imagemCliente">
+                                        <img src="image/fotoJoao.jpg" alt="fotoMaria">
+                                    </div>
+                                    <h4>
+                                        João Souza</h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>"Plataforma fácil de usar e com ótimos retornos. Recomendo para todos!"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="imagemCliente">
+                                        <img src="image/fotoAna.jpg" alt="fotoAna">
+                                    </div>
+                                    <h4>
+                                        Ana Oliveira
+                                    </h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>"Nunca foi tão simples acompanhar e gerenciar meus investimentos."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#depoimentosCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#depoimentosCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+
+        <form class="form-inline">Receba atualizações:
+            <input id="formEmail" name="formEmail" type="email" class="form-control" size="50"
+                placeholder="Endereço de Email" required>
+            <button onclick="formInscricao()" type="button" class="btn btn-danger">Inscrever-se</button>
+        </form>
+        <p style="padding-top: 10px;">InvesteFácil © 2024 - Desenvolvido por Thales, Matheus Viana, Vinícius Pereda.</p>
+    </footer>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

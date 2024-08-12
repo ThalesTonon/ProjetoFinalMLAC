@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+h3 {
+  margin: 0;
+}
+.navbar {
+  background-color: #004d66;
+  border-color: #004d66;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.text-custom {
+  color: #f2f2f2 !important;
+}
+.text-custom a {
+  color: #f2f2f2 !important;
+}
+.dadosCliente {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+}
+.tituloPagina {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.saldoCliente {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+.saldoCliente p {
+  margin-right: 1rem;
+}
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+  margin-top: 2rem;
+}
+.panel-heading {
+  display: flex;
+  justify-content: center;
+}
+.investimentosBody {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  height: 150px;
+}
+
+@media screen and (max-width: 1080px) {
+  .investimentosBody {
+    height: fit-content;
+  }
+  .saldoCliente {
+    flex-direction: column;
+  }
+}
+/* Depoimentos */
+.imagemCliente img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.depoimentos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.carousel {
+  margin: 2rem;
+}
+
+/* Páginas de investimentos */
+.divDetalhesProduto {
+  margin-top: 4rem;
+}
+.detalhesProduto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+.detalhesProduto li {
+  list-style: none;
+}
+
+/* alertas */
+.alert {
+  margin-top: 2rem;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>InvesteFácil - Investimentos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-custom" href="../index.html">InvesteFácil</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav text-custom">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="cdi.html">CDI</a></li>
+                    <li><a href="ipca.html">IPCA</a></li>
+                    <li><a href="ifix.html">IFIX</a></li>
+                    <li class="active"><a href="investimentos.html">INVESTIMENTOS</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle text-custom" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Sua Conta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li style="margin-left: 2rem;">João da Silva</li>
+                            <li><a href="#" onclick="sairFunction()"><span style="margin-right: 1rem;"
+                                        class="glyphicon glyphicon-log-out"></span>Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dadosCliente">
+            <div class="tituloPagina">
+                <h3>Resumo de Investimentos</h3>
+            </div>
+            <div class="saldoCliente">
+                <p>Saldo total investido:</p>
+                <strong>R$ 10.000,00</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>CDI</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Valor Investido: <strong>R$ 4.000,00</strong></p>
+                        <p>Rentabilidade no último mês: <strong>0,24 %</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>IPCA</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Valor Investido: <strong>R$ 3.000,00</strong></p>
+                        <p>Rentabilidade no último mês: <strong>0,38 %</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Fundos de Ações</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Valor Investido: <strong>R$ 3.000,00</strong></p>
+                        <p>Rentabilidade no último mês: <strong>-0,44 %</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 table-responsive text-center">
+                <canvas id="resumoInvestimentosChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+
+        <form class="form-inline">Receba atualizações:
+            <input id="formEmail" name="formEmail" type="email" class="form-control" size="50"
+                placeholder="Endereço de Email" required>
+            <button onclick="formInscricao()" type="button" class="btn btn-danger">Inscrever-se</button>
+        </form>
+        <p style="padding-top: 10px;">InvesteFácil © 2024 - Desenvolvido por Thales, Matheus Viana, Vinícius Pereda.</p>
+    </footer>
+
+    <script src="investimentos.js"></script>
+    <script src="../index.js"></script>
+
+</body>
+
+</html>
