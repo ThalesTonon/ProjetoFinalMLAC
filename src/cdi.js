@@ -31,7 +31,7 @@ var cdiChart = new Chart(ctx, {
     datasets: [
       {
         label: "CDI 2024",
-        data: [0.97, 0.8, 0.83, 0.89, 0.83, 0.79, 0.91, 0.24],
+        data: [0.97, 0.8, 0.83, 0.89, 0.83, 0.79, 0.91, 0.47],
         borderColor: "rgba(54, 162, 235, 1)",
         fill: false,
       },

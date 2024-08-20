@@ -1,6 +1,5 @@
 function formInscricao() {
   var formEmail = document.getElementById("formEmail").value;
-  var message = document.getElementById("messagemAlerta");
 
   if (formEmail === "") {
     Swal.fire({
@@ -9,7 +8,7 @@ function formInscricao() {
       text: "Email não pode ser vazio!",
     });
     return false;
-  } else if (!isValideEmail(formEmail)) {
+  } else if (!emailValido(formEmail)) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -27,7 +26,7 @@ function formInscricao() {
   }
 }
 
-function isValideEmail(email) {
+function emailValido(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
